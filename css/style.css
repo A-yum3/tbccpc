@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "NuYomogiMochi"; 
+  src: url("../NuYomogiMochi-v1.0.0/NuYomogiMochi-Reg.otf");
+}
+/*------------------
+      BASE
+--------------------*/
+
+html {
+  font-size: 62.5%;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.topic {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+div {
+  display: block;
+}
+
+/*--------------------
+        BODY
+----------------------*/
+
+body {
+  padding-top: 100px;
+  background-size: cover;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: NuYomogiMochi, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
+}
+
+/*---------------------
+        HEAD
+----------------------*/
+#nescss {
+  display: block;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  border-bottom: 4px solid #666666;
+  background-color: #FFFFFF;
+}
+.site-title-sub {
+  color: black;
+}
+.site-title {
+  color: black;
+}
+
+/*---------------------
+      Future
+----------------------*/
+.items {
+  padding: 20px;
+}
