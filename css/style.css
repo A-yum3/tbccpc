@@ -14,11 +14,8 @@ html {
   box-sizing: border-box;
 }
 .topic {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-div {
-  display: block;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 img {
   width: 256px;
@@ -57,6 +54,10 @@ header {
 .site-title {
   color: black;
 }
+
+/*------------------
+        video
+-------------------*/
 
 .bg-video-wrap {
   position: relative;
@@ -113,7 +114,6 @@ video {
 .items {
   padding: 20px;
 }
-
 /*---------------------
       contests
 -----------------------*/
@@ -132,6 +132,18 @@ table-layout: fixed;
 .contests-images {
   border-bottom: ridge #2C2C2C;
   margin-bottom: 10px;
+}
+/*-----------------------
+        join
+------------------------*/
+
+.joinus {
+  font-size: 2rem;
+  padding-bottom: 5%;
+}
+.topic .message {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
