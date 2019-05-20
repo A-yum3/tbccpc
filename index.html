@@ -3,26 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>TBCCPC</title>
+<title>TBC/CPC</title>
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?familly=Raleway:700,400">
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="js/script.js">
 </head>
 
 <body>
-    <div id="nescss">
-      <header :class="{ sticky: scrollPos > 50 }">
-        <div class="container">
-          <div class="nav-brand">
-            <a href="#">
-              <h1><i class="snes-jp-logo"></i> TBC/CPC</h1>
-            </a>
-            <p>TBC きょうぎ　ぷろぐらみんぐ　さーくる</p>
-          </div>
+  <div id="nescss">
+    <header :class="{ sticky: scrollPos > 50 }">
+      <div class="container">
+        <div class="nav-brand">
+          <a href="#">
+            <h1><i class="snes-jp-logo"></i> TBC/CPC</h1>
+          </a>
+          <p>TBC きょうぎ　ぷろぐらみんぐ　さーくる</p>
         </div>
-      </header>
+      </div>
+    </header>
+  </div>
+  
+  <div class="bg-video-wrap">
+    <video src="./images/top.mp4" loop muted autoplay>
+    </video>
+    <div class="overlay">
+    </div>
+    <h1>
+      TBC Competitive programming
+    </h1>
+    <button type="button" class="nes-btn is-primary btn">JOIN US</button>
+  </div>
   <!-- About -->
   <section class="topic">
     <h2 id="about">
@@ -84,10 +97,10 @@
   <section class="topic">
     <h2 id="contests">
       <a href="#">#</a>
-      コンテストサイト</h2>
-    <div class="nes-container">
+      コンテストサイト
+    </h2>
+    <div class="nes-container contests-container">
       <div class="contests-wrapper">
-        
         <div class="contests-box">
           <div class="contests-image">
             <a href="https://atcoder.jp/">
