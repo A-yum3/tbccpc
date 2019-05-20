@@ -20,7 +20,10 @@ html {
 div {
   display: block;
 }
-
+img {
+  width: 256px;
+  height: 256px;
+}
 /*--------------------
         BODY
 ----------------------*/
@@ -30,9 +33,9 @@ body {
   background-size: cover;
   text-align: center;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-family: NuYomogiMochi, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
-}
+ }
 
 /*---------------------
         HEAD
@@ -61,4 +64,22 @@ header {
 ----------------------*/
 .items {
   padding: 20px;
+}
+
+/*---------------------
+      contests
+-----------------------*/
+
+.contests-wrapper {
+  display: table;
+  width: 100%;
+  margin-top: 60px;
+  table-layout: fixed;
+}
+.contests-box {
+  display: table-cell;
+}
+.contests-wrapper,
+.contests-box {
+  display: block;
 }
