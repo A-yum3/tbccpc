@@ -17,7 +17,7 @@
     <header :class="{ sticky: scrollPos > 50 }">
       <div class="container">
         <div class="nav-brand">
-          <a href="#">
+          <a href="">
           <h1><em class="snes-jp-logo"></em> TBC/CPC</h1>
           </a>
           <p>TBC きょうぎ　ぷろぐらみんぐ　さーくる</p>
@@ -39,7 +39,7 @@
   <!-- About -->
   <section class="topic">
     <h2 id="about">
-      <a href="#">#</a>
+      <a href="">#</a>
       なにを　するの？
     </h2>
     <p>パズルのような　もんだいを コードでとく<br>
@@ -50,7 +50,7 @@
   <section class="topic">
     <div class="future-wrapper">
       <h2 id="future">
-        <a href="#">#</a>
+        <a href="">#</a>
         なにに　 役立つの？
       </h2>
       <div class="lists">
@@ -68,7 +68,7 @@
   <!-- foryou -->
   <section class="topic">
     <h2 id="foryou">
-      <a href="#">#</a>
+      <a href="">#</a>
       さんか　すべき　ヒト
     </h2>
     <ul class="nes-list is-circle">
@@ -80,7 +80,7 @@
   <!-- activation -->
   <section class="topic">
     <h2 id="activation">
-      <a href="#">#</a>
+      <a href="">#</a>
       かつどうび
     </h2>
     <p>ほうかご（金曜日）・こんてすと（じしゅさんか）</p>
@@ -88,7 +88,7 @@
   <!-- 就職採用サイト例 -->
   <section class="topic">
     <h2 id="userworksite">
-      <a href="#">#</a>
+      <a href="">#</a>
       さいよう　きぎょう　れい
     </h2>
     <ul class="nes-list is-circle">
@@ -104,7 +104,7 @@
   <!-- 使用コンテストサイトs-->
   <section class="topic">
     <h2 id="contests">
-      <a href="#">#</a>
+      <a href="">#</a>
       コンテストサイト
     </h2>
     <div class="nes-container contests-container">
@@ -157,7 +157,7 @@
   <br>
   <section class="topic">
     <h2 id="ranking-head">
-      <a href="#">#</a>
+      <a href="">#</a>
       Ranking
     </h2>
     <br>
@@ -197,7 +197,7 @@
             }
             
             // rank.idは１位２位とかのこと
-            ranking.insertAdjacentHTML('beforeend', "<div class=\"" + color + "\"><p class=" + prize + ">"  + rank.id + "位: <span>" + rank.name + "</span><br>Rate: <span>" + rank.rate + "</span></p><br></div>");
+            ranking.insertAdjacentHTML('beforeend', "<div class=\"" + color + "\"><p class=" + prize + ">"  + rank.id + "位: <a href=\"https://atcoder.jp/users/" + rank.name + "\"><span>" + rank.name + "</span></a><br>Rate: <span>" + rank.rate + "</span></p><br></div>");
           }
         }
       }
@@ -205,6 +205,7 @@
       //今回はGETなので引数はnull
       req.send(null);
     </script>
+    <!-- ここは地獄だ、早く逃げろ -->
   </section>
   <footer class="footer">
   </footer>
