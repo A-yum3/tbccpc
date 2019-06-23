@@ -154,11 +154,13 @@
     </section>
     <button type="button" class="nes-btn is-primary" onClick="location.href='https://forms.gle/qF1DeMscXEo8SLa76'">Join us!</button>
   </section>
+  <br>
   <section class="topic">
     <h2 id="ranking-head">
       <a href="#">#</a>
       Ranking
     </h2>
+    <br>
     <div id="ranking"></div>
     <!-- JavaScriptの記述 -->
     <script>
@@ -195,7 +197,7 @@
             }
             
             // rank.idは１位２位とかのこと
-            ranking.insertAdjacentHTML('beforeend', "<div class=\"" + color + "\"><span class=" + prize + ">"  + rank.id + "位</span>: <span>" + rank.name + "</span><br />Rate: <span>" + rank.rate + "</span><br /><br /></div>");
+            ranking.insertAdjacentHTML('beforeend', "<div class=\"" + color + "\"><p class=" + prize + ">"  + rank.id + "位: <span>" + rank.name + "</span><br>Rate: <span>" + rank.rate + "</span></p><br></div>");
           }
         }
       }
