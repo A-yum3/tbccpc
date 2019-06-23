@@ -149,6 +149,35 @@ table-layout: fixed;
   justify-content: center;
 }
 
+/*-----------------------
+        ranking
+-------------------------*/
+.user-green span {
+  color: #008000
+}
+.user-brown span {
+  color: #804000;
+}
+.user-gray span {
+  color: #808080;
+}
+.rank-one {
+  font-size: 3rem;
+  color: red !important;
+}
+.rank-two {
+  font-size: 2.5rem;
+  color: orange !important;
+}
+.rank-three {
+  font-size: 2rem;
+  color: #E0E855 !important; 
+}
+.rank-none {
+  color: black !important;
+}
+
+
 @media (max-width: 768px) {
   .contests-wrapper {
   display: table;

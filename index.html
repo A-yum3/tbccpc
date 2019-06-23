@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <title>TBC/CPC</title>
 <link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?familly=Raleway:700,400">
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-<link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
+<link href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<script type="text/javascript" src="js/script.js"></script>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="js/script.js">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
   </div>
   <!-- video -->
   <div class="bg-video-wrap">
-    <video src="./images/top.mp4" loop muted autoplay>
+    <video src="images/top.mp4" loop muted autoplay>
     </video>
     <div class="overlay">
     </div>
@@ -155,24 +155,54 @@
     <button type="button" class="nes-btn is-primary" onClick="location.href='https://forms.gle/qF1DeMscXEo8SLa76'">Join us!</button>
   </section>
   <section class="topic">
-    <h2 id="ranking">
+    <h2 id="ranking-head">
       <a href="#">#</a>
       Ranking
     </h2>
-    <p>Coming Soon</p>
-    <ul class="nes-list is-circle">
-      <li><a href="https://atcoder.jp/users/shuG">shuG(きそつ)</a></li>
-      <li><a href="https://atcoder.jp/users/oyassan">oyassan(きそつ)</a></li>
-      <li><a href="https://atcoder.jp/users/thisman">ThisMan(きそつ)</a></li>
-      <li><a href="https://atcoder.jp/users/lolitwintail">lolitwintail(4)</a></li>
-      <li><a href="https://atcoder.jp/users/mukan">Mukan(4)</a></li>
-      <li><a href="https://atcoder.jp/users/gomimap">gomimap(4)</a></li>
-      <li><a href="https://atcoder.jp/users/cowgirl">cowgirl(3)</a></li>
-      <li><a href="https://atcoder.jp/users/nonoark">NonoArk(2)</a></li>
-      <li><a href="https://atcoder.jp/users/ao213">ao213(1)</a></li>
-      <li><a href="https://atcoder.jp/users/iloveyou4ever">iloveyou4ever(1)</a></li>
-      <li><a href="https://atcoder.jp/users/chairisu">chairisu(1)</a></li>
-    </ul>
+    <div id="ranking"></div>
+    <!-- JavaScriptの記述 -->
+    <script>
+      var req = new XMLHttpRequest();
+      req.onreadystatechange = function () {
+
+        //通信が正常に終了したらtrue
+        if (req.readyState == 4 && req.status == 200) {
+          var data = req.responseText;
+
+          //JSON形式に整形して分解
+          data = data.slice(9);
+          data = data.slice(0, -1);
+          data = JSON.parse(data);
+
+          //ID = ranking の末尾に追加していく
+          for (var rank of data) {
+            // 着色部、緑まで実装
+            var color = "user-gray";
+            if(rank.rate >= 800) {
+              color = "user-green";
+            } else if(rank.rate >= 400) {
+              color = "user-brown";
+            }
+            var prize = "";
+            if(rank.id == 1) {
+              prize = "rank-one";
+            } else if(rank.id == 2) {
+              prize = "rank-two";
+            } else if(rank.id == 3) {
+              prize = "rank-three";
+            } else {
+              prize = "rank-none";
+            }
+            
+            // rank.idは１位２位とかのこと
+            ranking.insertAdjacentHTML('beforeend', "<div class=\"" + color + "\"><span class=" + prize + ">"  + rank.id + "位</span>: <span>" + rank.name + "</span><br />Rate: <span>" + rank.rate + "</span><br /><br /></div>");
+          }
+        }
+      }
+      req.open("GET", "https://script.googleusercontent.com/macros/echo?user_content_key=lBE4g0hiF8pDfP8gbZl1tDh3K6KlYRGiSwKp0F1hTgkZwFLnxLkskI9DOZV3m75Xz0SbyJVACkzYoznKLpCokMXVaHjAD0Xzm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnImwa1Ljh79acqiccorGlUWbajjEsXkHCqAy-VkcnHPegNifGoa4RSAhxke7gnniv5A9qcqyBKQ0&lib=MmJqW04Kw7Atw0OOQ1TKlpPhzGMXrOBqh", false);
+      //今回はGETなので引数はnull
+      req.send(null);
+    </script>
   </section>
   <footer class="footer">
   </footer>
