@@ -171,6 +171,9 @@ table-layout: fixed;
 .rank-none {
   color: black;
 }
+.user-cyan a > span, .user-cyan span {
+  color: #00C0C0;
+}
 .user-green a > span, .user-green span {
   color: #008000;
 }

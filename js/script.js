@@ -15,11 +15,16 @@ function loading_ranking(){
             for (var rank of data) {
               // 着色部、緑まで実装
               var color = "user-gray";
-              if(rank.rate >= 800) {
+              if(rank.rate >= 1200) {
+                color = "user-cyan"
+              }
+              else if(rank.rate >= 800) {
                 color = "user-green";
-              } else if(rank.rate >= 400) {
+              }
+              else if(rank.rate >= 400) {
                 color = "user-brown";
               }
+              
               var prize = "";
               if(rank.id == 1) {
                 prize = "rank-one";
